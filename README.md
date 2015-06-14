@@ -5,4 +5,4 @@ Depending on a customer's purchase/viewing history, the app makes product recomm
 1. Navigate to the store
 2. Add to cart
 
-Demo: https://youtu.be/Sn7Gg5jsPXk
+Demo: https://youtu.be/SctBVTunKfg
