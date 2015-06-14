@@ -222,11 +222,7 @@ public class WalmartService extends Service {
                 class MyJavaScriptInterface {
                     @JavascriptInterface
                     public void processHTML(String html) {
-                        Log.d("checkk", "2 a= " + html.substring(0, 111));
                         sb.append(html);
-                        Log.d("checkk", "2 b= " + sb.toString().substring(0, 111));
-//                        String a = html.substring(1, 42);
-//                        while(!a.equals("<html><head>\n<title>Walmart: Find In Store"));
                         latch.countDown();
                         Log.d("checkkk", sb.toString().substring(0, 88));
                     }
@@ -244,12 +240,12 @@ public class WalmartService extends Service {
                             @Override
                             public void onPageFinished(WebView view, String url) {
                                 // Need to inserr delay as the Walmart site JS takes some time to load
-                                Log.d("checkkk", "soja munna");
+                                Log.d("checkkk", "go to sleep :)");
                                 Handler handler = new Handler();
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Log.d("checkkk", "munna awake");
+                                        Log.d("checkkk", "awake");
                                         webView.loadUrl("javascript:window.HTMLOUT.processHTML('<html>'+document.getElementsByTagName('html')[0].innerHTML+'</html>');");
                                         Log.d("checkkk", "loaded.....................");
                                     }
